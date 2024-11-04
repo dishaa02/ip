@@ -1,0 +1,25 @@
+/* External CSS */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header, footer {
+    text-align: center;
+    padding: 15px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #2196f3;
+    padding: 10px;
+}
+
+th {
+    background-color: #64b5f6;
+    color: white;
+}

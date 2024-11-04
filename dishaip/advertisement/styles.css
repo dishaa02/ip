@@ -1,0 +1,105 @@
+/* External CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #673ab7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.advertisement-management {
+    padding: 20px;
+    background-color: #e1bee7;
+    border: 1px solid #ba68c8;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.ads {
+    display: flex;
+    flex-direction: column;
+}
+
+.ad {
+    background-color: #fff;
+    border: 1px solid #ba68c8;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.ad:hover {
+    transform: scale(1.03); /* Scale effect on hover */
+}
+
+.ad h3::before { 
+    content: "🔥 "; /* Pseudo-element to add flame icon */
+}
+
+.edit {
+    background-color: #ff9800; /* Orange button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete {
+    background-color: #f44336; /* Red button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Pseudo-class for hover effects */
+.edit:hover, .delete:hover {
+    opacity: 0.8;
+}
+
+.analytics {
+    padding: 20px;
+    background-color: #e1bee7;
+    border: 1px solid #ba68c8;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ba68c8;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ab47bc;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fce4ec; /* Zebra stripes for table rows */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #673ab7;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

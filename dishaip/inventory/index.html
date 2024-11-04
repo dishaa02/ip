@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+        }
+
+        header {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #2196f3;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #64b5f6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2196f3;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .category-list {
+            list-style-type: none; /* Removes bullet points */
+            padding: 0;
+            text-align: center;
+        }
+
+        .category-list li {
+            display: inline; /* Displays list items inline */
+            margin: 0 10px;
+            padding: 5px 10px;
+            background-color: #64b5f6;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+
+    <section>
+        <h2>Inventory Items</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: #d32f2f;">001</td> <!-- Inline CSS -->
+                    <td>Laptop</td>
+                    <td>Electronics</td>
+                    <td>15</td>
+                    <td>$800</td>
+                </tr>
+                <tr>
+                    <td style="color: #388e3c;">002</td> <!-- Inline CSS -->
+                    <td>Office Chair</td>
+                    <td>Furniture</td>
+                    <td>30</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td style="color: #f57c00;">003</td> <!-- Inline CSS -->
+                    <td>Printer</td>
+                    <td>Electronics</td>
+                    <td>10</td>
+                    <td>$200</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Categories</h2>
+        <ul class="category-list">
+            <li>Electronics</li>
+            <li>Furniture</li>
+            <li>Office Supplies</li>
+            <li>Appliances</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Inventory Management System</p>
+    </footer>
+</body>
+</html>

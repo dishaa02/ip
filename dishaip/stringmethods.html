@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implement String Methods in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .output {
+            margin-top: 20px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .method-btn {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Implement Different String Methods in JavaScript</h1>
+
+    <div>
+        <input type="text" id="stringInput" placeholder="Enter a string">
+        <button class="method-btn" onclick="getCharAt()">CharAt</button>
+        <button class="method-btn" onclick="concatStrings()">Concat</button>
+        <button class="method-btn" onclick="includesString()">Includes</button>
+        <button class="method-btn" onclick="indexOfString()">IndexOf</button>
+        <button class="method-btn" onclick="replaceString()">Replace</button>
+        <button class="method-btn" onclick="sliceString()">Slice</button>
+        <button class="method-btn" onclick="splitString()">Split</button>
+        <button class="method-btn" onclick="toLowerCaseString()">ToLowerCase</button>
+        <button class="method-btn" onclick="toUpperCaseString()">ToUpperCase</button>
+        <button class="method-btn" onclick="trimString()">Trim</button>
+    </div>
+
+    <div class="output" id="output"></div>
+
+    <script>
+        // Function to get a character at a specific index
+        function getCharAt() {
+            const str = document.getElementById('stringInput').value;
+            const index = 0; // Change this value to get different characters
+            const char = str.charAt(index);
+            alert('Character at index ' + index + ': ' + char);
+        }
+
+        // Function to concatenate another string
+        function concatStrings() {
+            const str1 = document.getElementById('stringInput').value;
+            const str2 = ' is awesome!';
+            const result = str1.concat(str2);
+            alert('Concatenated String: ' + result);
+        }
+
+        // Function to check if a string includes a substring
+        function includesString() {
+            const str = document.getElementById('stringInput').value;
+            const substring = 'awesome'; // Change to test different substrings
+            const result = str.includes(substring);
+            alert('Includes "' + substring + '": ' + result);
+        }
+
+        // Function to find the index of a substring
+        function indexOfString() {
+            const str = document.getElementById('stringInput').value;
+            const substring = 'awesome'; // Change to test different substrings
+            const index = str.indexOf(substring);
+            alert('Index of "' + substring + '": ' + index);
+        }
+
+        // Function to replace a substring with another substring
+        function replaceString() {
+            const str = document.getElementById('stringInput').value;
+            const result = str.replace('awesome', 'fantastic'); // Change the target substring
+            alert('Replaced String: ' + result);
+        }
+
+        // Function to slice a string
+        function sliceString() {
+            const str = document.getElementById('stringInput').value;
+            const result = str.slice(0, 5); // Change indices to slice differently
+            alert('Sliced String: ' + result);
+        }
+
+        // Function to split a string into an array
+        function splitString() {
+            const str = document.getElementById('stringInput').value;
+            const result = str.split(' '); // Split by spaces
+            alert('Split String: ' + JSON.stringify(result));
+        }
+
+        // Function to convert to lowercase
+        function toLowerCaseString() {
+            const str = document.getElementById('stringInput').value;
+            const result = str.toLowerCase();
+            alert('Lowercase String: ' + result);
+        }
+
+        // Function to convert to uppercase
+        function toUpperCaseString() {
+            const str = document.getElementById('stringInput').value;
+            const result = str.toUpperCase();
+            alert('Uppercase String: ' + result);
+        }
+
+        // Function to trim whitespace from both ends
+        function trimString() {
+            const str = document.getElementById('stringInput').value;
+            const result = str.trim();
+            alert('Trimmed String: "' + result + '"');
+        }
+    </script>
+
+</body>
+</html>

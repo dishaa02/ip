@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .result {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Interactive Quiz</h1>
+        <div id="quizContainer"></div>
+        <button class="btn btn-primary mt-3" id="submitBtn">Submit Answers</button>
+        <div class="result mt-3">
+            <h3>Your Score: <span id="score"></span></h3>
+        </div>
+    </div>
+
+    <script>
+        // Class for Quiz Questions
+        class Question {
+            constructor(questionText, options, correctAnswer) {
+                this.questionText = questionText;
+                this.options = options;
+                this.correctAnswer = correctAnswer;
+            }
+        }
+
+        // Array of quiz questions
+        const questions = [
+            new Question("What is the capital of France?", ["Berlin", "Madrid", "Paris", "Rome"], "Paris"),
+            new Question("Which planet is known as the Red Planet?", ["Earth", "Mars", "Jupiter", "Saturn"], "Mars"),
+            new Question("What is the largest mammal in the world?", ["Elephant", "Blue Whale", "Giraffe", "Great White Shark"], "Blue Whale"),
+            new Question("Which element has the chemical symbol 'O'?", ["Gold", "Oxygen", "Hydrogen", "Carbon"], "Oxygen"),
+            new Question("What is the smallest prime number?", ["1", "2", "3", "0"], "2")
+        ];
+
+        let score = 0; // Variable to store the score
+
+        // Function to render quiz questions
+        function renderQuiz() {
+            const quizContainer = document.getElementById('quizContainer');
+            questions.forEach((question, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.innerHTML = `
+                    <h5>${index + 1}. ${question.questionText}</h5>
+                    ${question.options.map((option) => `
+                        <div>
+                            <input type="radio" name="question${index}" value="${option}" required> ${option}
+                        </div>
+                    `).join('')}
+                `;
+                quizContainer.appendChild(questionDiv);
+            });
+        }
+
+        // Function to calculate score
+        function calculateScore() {
+            questions.forEach((question, index) => {
+                const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+                if (selectedOption && selectedOption.value === question.correctAnswer) {
+                    score++;
+                }
+            });
+        }
+
+        // Event listener for the submit button
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            calculateScore();
+            document.getElementById('score').textContent = score;
+            document.querySelector('.result').style.display = 'block';
+        });
+
+        // Render quiz on page load
+        window.onload = renderQuiz;
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

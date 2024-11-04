@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implement Array Methods in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .output {
+            margin-top: 20px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .method-btn {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Implement Different Array Methods in JavaScript</h1>
+
+    <div>
+        <input type="text" id="fruitInput" placeholder="Enter a fruit">
+        <button class="method-btn" onclick="addFruit()">Push</button>
+        <button class="method-btn" onclick="removeLastFruit()">Pop</button>
+        <button class="method-btn" onclick="removeFirstFruit()">Shift</button>
+        <button class="method-btn" onclick="addFruitToFront()">Unshift</button>
+        <button class="method-btn" onclick="sliceFruits()">Slice (1, 3)</button>
+        <button class="method-btn" onclick="spliceFruits()">Splice (1, 1, 'Grapes')</button>
+        <button class="method-btn" onclick="mapFruits()">Map Lengths</button>
+        <button class="method-btn" onclick="filterFruits()">Filter Long Fruits</button>
+        <button class="method-btn" onclick="reduceFruits()">Reduce Length</button>
+        <button class="method-btn" onclick="findFruit()">Find Fruit Starting with 'G'</button>
+    </div>
+
+    <div class="output" id="output"></div>
+
+    <script>
+        // Initializing an array
+        let fruits = ['Apple', 'Banana', 'Orange'];
+
+        // Function to display the current state of the array
+        function displayFruits() {
+            document.getElementById('output').innerHTML = 'Current Fruits: ' + JSON.stringify(fruits);
+        }
+
+        // Function to push a new fruit into the array
+        function addFruit() {
+            const fruit = document.getElementById('fruitInput').value;
+            if (fruit) {
+                fruits.push(fruit);
+                displayFruits();
+            }
+            document.getElementById('fruitInput').value = ''; // Clear input
+        }
+
+        // Function to pop the last fruit from the array
+        function removeLastFruit() {
+            if (fruits.length > 0) {
+                fruits.pop();
+                displayFruits();
+            } else {
+                alert('No fruits to pop!');
+            }
+        }
+
+        // Function to shift the first fruit from the array
+        function removeFirstFruit() {
+            if (fruits.length > 0) {
+                fruits.shift();
+                displayFruits();
+            } else {
+                alert('No fruits to shift!');
+            }
+        }
+
+        // Function to unshift a new fruit to the front of the array
+        function addFruitToFront() {
+            const fruit = document.getElementById('fruitInput').value;
+            if (fruit) {
+                fruits.unshift(fruit);
+                displayFruits();
+            }
+            document.getElementById('fruitInput').value = ''; // Clear input
+        }
+
+        // Function to slice the array
+        function sliceFruits() {
+            const slicedFruits = fruits.slice(1, 3);
+            alert('Sliced Fruits (1, 3): ' + JSON.stringify(slicedFruits));
+        }
+
+        // Function to splice the array
+        function spliceFruits() {
+            fruits.splice(1, 1, 'Grapes'); // Remove 1 element at index 1 and add 'Grapes'
+            displayFruits();
+        }
+
+        // Function to map the array
+        function mapFruits() {
+            const fruitLengths = fruits.map((fruit) => fruit.length);
+            alert('Fruit Lengths: ' + JSON.stringify(fruitLengths));
+        }
+
+        // Function to filter the array
+        function filterFruits() {
+            const longFruits = fruits.filter((fruit) => fruit.length > 6);
+            alert('Fruits Longer Than 6 Characters: ' + JSON.stringify(longFruits));
+        }
+
+        // Function to reduce the array
+        function reduceFruits() {
+            const totalLength = fruits.reduce((accumulator, fruit) => accumulator + fruit.length, 0);
+            alert('Total Length of Fruit Names: ' + totalLength);
+        }
+
+        // Function to find a fruit
+        function findFruit() {
+            const foundFruit = fruits.find((fruit) => fruit.startsWith('G'));
+            alert('First Fruit Starting with "G": ' + foundFruit);
+        }
+
+        // Initial display of fruits
+        displayFruits();
+    </script>
+
+</body>
+</html>
+
+

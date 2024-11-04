@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        h2 {
+            color: #00796b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #009688;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #00796b;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        form input[type="submit"] {
+            background-color: #00796b;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Class Timetable</h1>
+    </header>
+    
+    <section>
+        <h2>Weekly Class Timetable</h2>
+        <table>
+            <caption>Class Schedule</caption>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 10:00</td>
+                    <td>Internet of Things</td>
+                    <td>Internet Programming</td>
+                    <td>Advanced DSA</td>
+                    <td>Computer Security</td>
+                    <td>Entrepreneurship</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td>Internet Programming</td>
+                    <td>Computer Security</td>
+                    <td>Internet of Things</td>
+                    <td>Entrepreneurship</td>
+                    <td>Advanced DSA</td>
+                </tr>
+                <tr>
+                    <td>11:00 - 12:00</td>
+                    <td>Advanced DSA</td>
+                    <td>Entrepreneurship</td>
+                    <td>Computer Security</td>
+                    <td>Internet Programming</td>
+                    <td>Internet of Things</td>
+                </tr>
+                <tr>
+                    <td>12:00 - 1:00</td>
+                    <td colspan="5">Lunch Break</td>
+                </tr>
+                <tr>
+                    <td>1:00 - 2:00</td>
+                    <td>Computer Security</td>
+                    <td>Advanced DSA</td>
+                    <td>Entrepreneurship</td>
+                    <td>Internet of Things</td>
+                    <td>Internet Programming</td>
+                </tr>
+                <tr>
+                    <td>2:00 - 3:00</td>
+                    <td>Entrepreneurship</td>
+                    <td>Internet of Things</td>
+                    <td>Advanced DSA</td>
+                    <td>Computer Security</td>
+                    <td>Internet Programming</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>List of Subjects</h2>
+        <ul>
+            <li>Internet of Things</li>
+            <li>Internet Programming</li>
+            <li>Advanced DSA</li>
+            <li>Computer Security</li>
+            <li>Entrepreneurship</li>
+        </ul>
+        
+        <h2>Feedback Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <h2>Classroom Tour Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" title="Classroom Tour" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Class Timetable</p>
+    </footer>
+</body>
+</html>

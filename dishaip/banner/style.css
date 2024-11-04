@@ -1,0 +1,105 @@
+/* External CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-management {
+    padding: 20px;
+    background-color: #e3f2fd;
+    border: 1px solid #2196f3;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.banners {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    background-color: #fff;
+    border: 1px solid #2196f3;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.banner:hover {
+    transform: scale(1.02); /* Scale effect on hover */
+}
+
+.banner h3::after { 
+    content: " 🌟"; /* Pseudo-element to add star icon */
+}
+
+.edit {
+    background-color: #ffa000; /* Orange button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete {
+    background-color: #d32f2f; /* Red button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Pseudo-class for hover effects */
+.edit:hover, .delete:hover {
+    opacity: 0.8;
+}
+
+.analytics {
+    padding: 20px;
+    background-color: #e3f2fd;
+    border: 1px solid #2196f3;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #2196f3;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #64b5f6;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra stripes for table rows */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
